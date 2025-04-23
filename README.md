@@ -78,4 +78,5 @@ streamlit run pdf_bot.py
 
 ---
 
-### Thank You
+### 🙌 Thank You
+Thank you for exploring this project!
