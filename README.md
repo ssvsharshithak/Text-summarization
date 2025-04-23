@@ -1,58 +1,81 @@
-# Text-summarization
-Text summarization:
-Design and implement a text summarization system that utilizes Natural Language Processing (NLP) techniques. The goal is to develop a model capable of summarizing lengthy documents or articles, providing a concise representation of the main ideas and key information. The assignment involves both extractive and abstractive summarization methods, allowing students to explore and compare different approaches.
 
-Tasks:
-Data Collection and Preprocessing:
-Use the documents shared for training and evaluation.
-Preprocess the data by tokenizing, removing stop words, and handling any necessary cleaning steps.
-Feature Extraction:
-Implement word embeddings for representing words or phrases.
-Explore the use of named entity recognition (NER) and part-of-speech (POS) tagging for feature extraction.
-Extractive Summarization:
-Implement an extractive summarization method using techniques such as sentence scoring based on importance.
-Evaluate and compare different scoring approaches.
-Abstractive Summarization:
-Explore abstractive summarization techniques using deep learning models like transformers.
-Implement and compare the performance of different abstractive methods.
+# 📄 PDF Document Chatbot using LangChain & OpenAI
 
-Evaluation:
-Develop evaluation metrics to measure the effectiveness of the summarization model.
-Conduct thorough experiments to assess the model's performance on diverse datasets.
-Comparison and Analysis:
-Compare the results of extractive and abstractive summarization methods.
-Analyze the strengths and weaknesses of different approaches.
-Documentation:
-Prepare a report documenting the methodology, implementation details, and results.
-Create a presentation summarizing the key findings and insights.
-Here are the documents to be used for training.
-  
+This project implements a document-based chatbot using **LangChain**, **OpenAI's text-davinci-003**, and **FAISS**. The chatbot processes PDF documents and allows users to ask natural language questions, returning contextually accurate answers based on the document content.
 
+---
 
-Problem Statement:
-Your task is to design and implement a chatbot that can comprehend a given document and answer questions based on its content. The chatbot should take natural language questions from users and provide relevant answers by extracting information from the document.
+## 🧠 Features
 
-Tasks:
-Dataset Selection:
-Use the above documents.
-Some of the questions to answer
-What is a sensor fusion?
-What is BMS?
-What are the types of BMS?
-What are the Sensor fusion uses cases and Sensor Requirements?
-Document Processing:
-Implement a method to preprocess and tokenize the document text, preparing it for analysis.
-Question Processing:
-Develop a mechanism to process and understand natural language questions from users.
-Information Extraction:
-Use techniques such as Named Entity Recognition (NER) or keyword extraction to identify key entities or concepts in the document.
-Model Implementation:
-Design and implement a chatbot model that can match user questions with relevant information in the document.
-User Interaction:
-Enable the chatbot to interact with users, accepting questions in natural language and providing coherent answers. don’t create any screens, just need a python code.
+- Reads multiple PDF documents from a specified folder.
+- Extracts and preprocesses text using `PyPDF2`.
+- Splits long documents into manageable chunks.
+- Converts text into embeddings using OpenAI.
+- Stores and searches text chunks using FAISS for fast retrieval.
+- Handles user questions using LangChain’s `ConversationalRetrievalChain`.
+- Displays results in a Streamlit interface with chat history support.
 
-Deliverables:
-•	approach to your solution, 
-•	able to clearly explain your thought process.  (during interview)
-•	your python code. Share it in .py format.
-•	For chat bot, accuracy of answers.
+---
+
+## 🛠️ Technologies Used
+
+- Python
+- LangChain
+- OpenAI API (`text-davinci-003`)
+- FAISS (Facebook AI Similarity Search)
+- PyPDF2
+- Streamlit
+- python-dotenv
+
+---
+
+## 📂 Folder Structure
+
+```
+.
+├── pdf_bot.py               # Main chatbot script
+├── .env                     # Contains OpenAI API key
+├── pdf_data/                # Folder for storing input PDF files
+```
+
+---
+
+## ⚙️ How to Run
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/yourusername/pdf-chatbot.git
+cd pdf-chatbot
+```
+
+### 2. Install the required packages
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Add your OpenAI API Key
+Create a `.env` file and add:
+```
+OPENAI_API_KEY=your_openai_key
+```
+
+### 4. Add PDF files
+Put your PDF files inside the `pdf_data/` directory.
+
+### 5. Run the Streamlit app
+```bash
+streamlit run pdf_bot.py
+```
+
+---
+
+## 💬 Sample Questions to Ask
+
+- What is a sensor fusion?
+- What is BMS?
+- What are the types of BMS?
+- What are the Sensor fusion use cases?
+
+---
+
+### Thank You
