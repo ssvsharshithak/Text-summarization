@@ -1,6 +1,7 @@
 # Text-summarization
 Text summarization:
 Design and implement a text summarization system that utilizes Natural Language Processing (NLP) techniques. The goal is to develop a model capable of summarizing lengthy documents or articles, providing a concise representation of the main ideas and key information. The assignment involves both extractive and abstractive summarization methods, allowing students to explore and compare different approaches.
+
 Tasks:
 Data Collection and Preprocessing:
 Use the documents shared for training and evaluation.
@@ -14,6 +15,7 @@ Evaluate and compare different scoring approaches.
 Abstractive Summarization:
 Explore abstractive summarization techniques using deep learning models like transformers.
 Implement and compare the performance of different abstractive methods.
+
 Evaluation:
 Develop evaluation metrics to measure the effectiveness of the summarization model.
 Conduct thorough experiments to assess the model's performance on diverse datasets.
@@ -29,6 +31,7 @@ Here are the documents to be used for training.
 
 Problem Statement:
 Your task is to design and implement a chatbot that can comprehend a given document and answer questions based on its content. The chatbot should take natural language questions from users and provide relevant answers by extracting information from the document.
+
 Tasks:
 Dataset Selection:
 Use the above documents.
@@ -47,6 +50,7 @@ Model Implementation:
 Design and implement a chatbot model that can match user questions with relevant information in the document.
 User Interaction:
 Enable the chatbot to interact with users, accepting questions in natural language and providing coherent answers. don’t create any screens, just need a python code.
+
 Deliverables:
 •	approach to your solution, 
 •	able to clearly explain your thought process.  (during interview)
