@@ -1,22 +1,40 @@
+# 📄 PDF Question & Answer Bot
 
-# PDF Q&A Bot
+An AI-powered application that allows users to upload PDF documents and ask questions in natural language. The system retrieves relevant information using vector search and generates accurate answers using OpenAI models.
 
-Upload PDFs and ask questions about them using OpenAI's GPT-4o-mini and LangChain.
+---
 
-## Features
+## 🖥️ Application UI
 
-- Upload PDFs and ask natural language questions
-- AI-powered answers with source document references
-- Chat history within sessions
-- Rate limiting and file validation
-- Automatic retry logic for API calls
+![App UI](./assets/UI.png)
 
-## Tech Stack
+---
 
-- Python 3.9+
-- LangChain + OpenAI API
-- FAISS for vector search
-- Streamlit for web UI
+## 🚀 Features
+
+- 📂 Upload PDF documents  
+- ❓ Ask questions in natural language  
+- 🧠 AI-generated answers using GPT-4o-mini  
+- 🔍 Semantic search using FAISS vector database  
+- 📑 Displays source document references  
+- 💬 Chat history within session  
+- ⚡ Rate limiting and file validation  
+- 🔁 Automatic retry logic for API calls  
+
+---
+
+## 🛠️ Tech Stack
+
+| Component        | Technology Used |
+|----------------|---------------|
+| Language        | Python 3.8+ |
+| LLM Framework   | LangChain |
+| AI Model        | OpenAI GPT-4o-mini |
+| Vector Database | FAISS |
+| UI              | Streamlit |
+| Embeddings      | OpenAI Embeddings |
+
+---
 
 ## Setup
 
@@ -38,7 +56,7 @@ pip install -r requirements.txt
 
 4. Create `.env` file with your OpenAI API key:
 ```
-OPENAI_API_KEY=sk-your-key-here
+OPENAI_API_KEY= your-key-here
 ```
 
 Get your key at https://platform.openai.com/api-keys
