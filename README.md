@@ -1,82 +1,68 @@
 
-# 📄 PDF Document Chatbot using LangChain & OpenAI
+# PDF Q&A Bot
 
-This project implements a document-based chatbot using **LangChain**, **OpenAI's text-davinci-003**, and **FAISS**. The chatbot processes PDF documents and allows users to ask natural language questions, returning contextually accurate answers based on the document content.
+Upload PDFs and ask questions about them using OpenAI's GPT-4o-mini and LangChain.
 
----
+## Features
 
-## 🧠 Features
+- Upload PDFs and ask natural language questions
+- AI-powered answers with source document references
+- Chat history within sessions
+- Rate limiting and file validation
+- Automatic retry logic for API calls
 
-- Reads multiple PDF documents from a specified folder.
-- Extracts and preprocesses text using `PyPDF2`.
-- Splits long documents into manageable chunks.
-- Converts text into embeddings using OpenAI.
-- Stores and searches text chunks using FAISS for fast retrieval.
-- Handles user questions using LangChain’s `ConversationalRetrievalChain`.
-- Displays results in a Streamlit interface with chat history support.
+## Tech Stack
 
----
+- Python 3.9+
+- LangChain + OpenAI API
+- FAISS for vector search
+- Streamlit for web UI
 
-## 🛠️ Technologies Used
+## Setup
 
-- Python
-- LangChain
-- OpenAI API (`text-davinci-003`)
-- FAISS (Facebook AI Similarity Search)
-- PyPDF2
-- Streamlit
-- python-dotenv
-
----
-
-## 📂 Folder Structure
-
-```
-.
-├── pdf_bot.py               # Main chatbot script
-├── .env                     # Contains OpenAI API key
-├── pdf_data/                # Folder for storing input PDF files
-```
-
----
-
-## ⚙️ How to Run
-
-### 1. Clone the repository
+1. Clone and navigate to the project:
 ```bash
-git clone https://github.com/yourusername/pdf-chatbot.git
-cd pdf-chatbot
+cd Text-summarization
 ```
 
-### 2. Install the required packages
+2. Create a virtual environment:
+```bash
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+```
+
+3. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Add your OpenAI API Key
-Create a `.env` file and add:
+4. Create `.env` file with your OpenAI API key:
 ```
-OPENAI_API_KEY=your_openai_key
+OPENAI_API_KEY=sk-your-key-here
 ```
 
-### 4. Add PDF files
-Put your PDF files inside the `pdf_data/` directory.
+Get your key at https://platform.openai.com/api-keys
 
-### 5. Run the Streamlit app
+5. Run the app:
 ```bash
 streamlit run pdf_bot.py
 ```
 
----
+Open `http://localhost:8501` in your browser.
 
-## 💬 Sample Questions to Ask
+## Usage
 
-- What is a sensor fusion?
-- What is BMS?
-- What are the types of BMS?
-- What are the Sensor fusion use cases?
+1. Upload PDFs in the sidebar
+2. Ask questions about your documents
+3. View answers with source references
+4. Chat history persists during your session
 
----
+## Limits
 
-### 🙌 Thank You
-Thank you for exploring this project!
+- 20 questions per hour
+- 50MB max file size
+- PDF files only
+
+## License
+
+MIT
